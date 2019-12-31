@@ -1,13 +1,15 @@
-let express = require('express'),
-    app = express(),
+import * as mongoose from 'mongoose';
+import * as express from 'express';
+
+const app = express(),
     port = process.env.PORT || 3000,
-    mongoose = require('mongoose'),
     User = require('./api/models/userModel'), // Created model loading here
     bodyParser = require('body-parser');
 
 // Mongoose instance connection url connection
-mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/test', { useNewUrlParser: true }).
+(<any>mongoose).Promise = global.Promise;
+mongoose.connect('mongodb://localhost:27017/test',
+    { useNewUrlParser: true, useUnifiedTopology: true }).
     catch(error => {
         console.error(error)
     });
@@ -15,7 +17,7 @@ mongoose.connect('mongodb://localhost:27017/test', { useNewUrlParser: true }).
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-let routes = require('./api/routes/userRoutes'); // Importing routes
+const routes = require('./api/routes/userRoutes'); // Importing routes
 routes(app); // Register the route
 
 app.listen(port);

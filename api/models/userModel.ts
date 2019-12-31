@@ -1,8 +1,7 @@
-'use strict';
-let mongoose = require('mongoose');
-let Schema = mongoose.Schema;
+import * as mongoose from 'mongoose';
+import { Schema } from 'mongoose';
 
-let UserSchema = new Schema({
+const UserSchema = new Schema({
     id: Number,
     name: {
         type: String,

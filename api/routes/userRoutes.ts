@@ -1,6 +1,7 @@
-'use strict';
-module.exports = function (app) {
-    let userController = require('../controllers/userController');
+import { Express } from 'express';
+
+module.exports = function (app: Express) {
+    const userController = require('../controllers/userController');
 
     // GET example: http://127.0.0.1:3000/api/users
     // POST example: curl -v -H "Content-Type: application/json" -XPOST --data "{\"id\":3,\"name\":\"Rick\"}" localhost:3000/api/users
@@ -15,5 +16,5 @@ module.exports = function (app) {
         .get(userController.readUser)
         .put(userController.updateUser)
         .delete(userController.deleteUser);
-        
+
 };
