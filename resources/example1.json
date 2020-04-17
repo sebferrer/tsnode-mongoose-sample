@@ -1,0 +1,17 @@
+{
+    "id": "00000001",
+    "title": "Kimi voted most amazing cat of the century",
+    "headLine": "This cute little tiger cat was the unanimous opinion of the jury",
+    "mainPicture": "http://sebferrer.fr/kimi/kimi2.png",
+    "issn": 1,
+    "description": "Lorem ipsum dolor sit amet",
+    "news": [
+        {
+            "title": "Kimi slept 20 hours today",
+            "importance": 3
+        },
+        {
+            "title": "Neil Armstrong landed on the moon"
+        }
+    ]
+}

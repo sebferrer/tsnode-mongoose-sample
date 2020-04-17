@@ -1,0 +1,17 @@
+{
+    "id": "00000002",
+    "title": "Curry-Chronicles just came out today!",
+    "headLine": "A very promising new cooking sebsite",
+    "mainPicture": "https://curry-chronicles.github.io/assets/curry_chronicles.svg",
+    "issn": 2,
+    "description": "Lorem ipsum dolor sit amet",
+    "news": [
+        {
+            "title": "Marmiton is ruined. What happened?",
+            "importance": 2
+        },
+        {
+            "title": "Philippe Etchebest is now working for Curry-Chronicles, what a turnover!"
+        }
+    ]
+}

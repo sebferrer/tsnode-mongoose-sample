@@ -1,5 +1,5 @@
 FROM centos:centos7
-LABEL   MAINTAINER="sebferrer" \
+LABEL   MAINTAINER="curry-chronicles team" \
          IMAGE_NAME="tsnode-mongoose-sample"
 
 ARG RPMS='nodejs'
@@ -16,8 +16,7 @@ WORKDIR /opt/nodejs-mongoose-sample
 
 COPY package.json .
 COPY package-lock.json .
-COPY server.ts .
-COPY api api
+COPY src src
 
 RUN chmod -R 755 /opt &&\
     npm install
